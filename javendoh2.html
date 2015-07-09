@@ -1,0 +1,69 @@
+<head>
+  <title>javendoh2</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-light_green.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<template name="main">
+
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+{{> nav}}
+<main class="mdl-layout__content">
+  <div class="page-content">
+    <!-- Your content goes here -->
+
+    {{> yield}}
+
+  </div>
+</main>
+{{> foot}}
+</body>
+
+</template>
+
+<template name="nav">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Javendoh</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="{{pathFor route='home'}}">Home</a>
+        <a class="mdl-navigation__link" href="{{pathFor route='yard'}}">Yard</a>
+        <a class="mdl-navigation__link" href="">Log in</a>
+        <a class="mdl-navigation__link" href="{{pathFor route='register'}}">Register</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+
+
+</div>
+</template>
+
+<template name="foot">
+
+<footer class="mdl-mini-footer">
+<div class="mdl-mini-footer--left-section">
+  <div class="mdl-logo">Javendoh</div>
+  <ul class="mdl-mini-footer--link-list">
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Privacy & Terms</a></li>
+  </ul>
+</div>
+</footer>
+</template>

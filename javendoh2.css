@@ -1,0 +1,25 @@
+/*Home pahe card styles*/
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+/*Yard page card's styles*/
+.demo-card-wideY.mdl-card {
+  width: 712px;
+}
+.demo-card-wideY > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wideY > .mdl-card__menu {
+  color: #fff;
+}
