@@ -1,7 +1,7 @@
 Sale = new Mongo.Collection('sale');
 
 if (Meteor.isClient) {
-  Meteor.subscribe('sale');
+Meteor.subscribe('sale');
   Template.yard.rendered = function() {
 
   };
@@ -10,6 +10,9 @@ Template.yard.helpers({
      return Sale.find();
 
   },
+  saleToDelete: function(){
+    return Session.set('saleToDelete');
+  }
 
 });
 
@@ -38,8 +41,22 @@ Template.yard.events({
   event.target.zip.value ="";
   event.target.desc.value = "";
   return false;
-  }
+  },
+  'click .deleteConfirmation':function(evt,tmpl){
+    evt.preventDefault();
+    evt.stopPropagation();
+    Session.set('saleToDelete',this._id);
+  },
 });
+Template.saleView.events({
+  "click .delete": function(){
+    Sale.remove(this._id);
+  }
+
+});
+Template.saleView.sale = function(){
+  return Sale.find();
+};
 }
 
 if(Meteor.isServer){

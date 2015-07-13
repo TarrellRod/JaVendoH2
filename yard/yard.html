@@ -1,5 +1,7 @@
 <template name="yard">
-
+{{#if saleToDelete}}
+{{>delconfirm}}
+{{/if}}
 <div class="demo-grid-1 mdl-grid">
 
   <div class="mdl-cell mdl-cell--6-col mdl-cell--middle form">
@@ -50,7 +52,7 @@
 
   </div>
 <div class="mdl-cell mdl-cell--4-col">
-  {{> saleView}}
+  {{>saleView}}
 
 </div>
 </div>
@@ -61,16 +63,17 @@
 
     <div class="mdl-card mdl-shadow--2dp demo-card-event sv">
       <div class="mdl-card__title mdl-card--expand">
-        <h4>
-          Featured event: {{saleName}}<br>
-        </h4>
+        <h6>
+          Event: {{saleName}}<br>
+        </h6>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Add to Calendar
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect deleteConfirmation">
+          Remove Sale
         </a>
       </div>
     </div>
+    <br>
 
 
 
