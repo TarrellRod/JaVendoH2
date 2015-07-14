@@ -8,3 +8,5 @@ meteor-platform
 insecure
 iron:router
 dburles:collection-helpers
+mizzao:bootstrap-3
+jquery
