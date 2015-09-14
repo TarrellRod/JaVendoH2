@@ -1,10 +1,21 @@
 <template name="register">
-  <h1>Register</h1>
+  <div class="register">
+    <h1>Register</h1>
+    <form>
+      <div class="mdl-textfield mdl-js-textfield ">
+        <input class="mdl-textfield__input" id="email" type="email" name="loginEmail">
+        <label class="mdl-textfield__label" for="email">Email</label>
 
-  <form>
-        <input type="email" name="registerEmail">
-        <input type="password" name="registerPassword">
-        <input type="submit" value="Register">
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" id="password" type="password" name="loginPassword">
+        <label class="mdl-textfield__label" for="password">password</label>
+
+      </div>
+      <br>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" >
+       register</button>
     </form>
-    
+  </div>
+
 </template>
