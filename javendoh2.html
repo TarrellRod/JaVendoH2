@@ -1,8 +1,8 @@
 <head>
   <title>javendoh2</title>
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-light_green.min.css" />
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-light_green.min.css" />
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
 </head>
 
 
@@ -14,7 +14,7 @@
 <main class="mdl-layout__content">
   <div class="page-content">
     <!-- Your content goes here -->
-
+    <br><br><br>
     {{> yield}}
 
   </div>
@@ -35,9 +35,12 @@
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <a class="mdl-navigation__link" href="{{pathFor route='home'}}">Home</a>
-        <a class="mdl-navigation__link" href="{{pathFor route='yard'}}">Yard</a>
-        <a class="mdl-navigation__link" href="">Log in</a>
-        <a class="mdl-navigation__link" href="{{pathFor route='register'}}">Register</a>
+        {{#if currentUser}}
+          <a class="mdl-navigation__link" href="{{pathFor route='yard'}}">Yard</a>
+        {{else}}
+          <a class="mdl-navigation__link" href="{{pathFor route='login'}}">Log in</a>
+          <a class="mdl-navigation__link" href="{{pathFor route='register'}}">Register</a>
+        {{/if}}
       </nav>
     </div>
   </header>

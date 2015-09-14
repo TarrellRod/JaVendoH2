@@ -16,3 +16,8 @@ Router.route('/yard', {
     name: 'yard',
     template: 'yard'
 });
+Router.route('/login', {
+    name: 'login',
+    Template: 'login'
+
+});
